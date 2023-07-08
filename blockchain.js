@@ -1,8 +1,8 @@
 //TOKEN CONTRACT ADDRESS
-const TOKEN_ADDRESS = 0xda6bf12679a5c6643aca3389e9c13865128015cc;
+// const TOKEN_ADDRESS = 0xda6bf12679a5c6643aca3389e9c13865128015cc;
 
 //NFT COLLECTION ADDRESS
-const NFT_ADDRESS = 0x656886f287048039439ec7229b9a95aad4e7ef12;
+// const NFT_ADDRESS = 0x656886f287048039439ec7229b9a95aad4e7ef12;
 
 let provider = new ethers.providers.Web3Provider(window.ethereum);
 let signer;
@@ -21,12 +21,12 @@ async function connectMetamask() {
 }
 
 async function claimTokens() {
-  // const runTokenContractAddress = "0xe20ab509edc8f6156068a5a49b8981909ce920aa";
+  const runTokenContractAddress = "0xda6bf12679a5c6643aca3389e9c13865128015cc";
   const runTokenContractABI = [
     "function mintTokens(address account, uint256 amount) public",
   ];
   const runTokenContract = new ethers.Contract(
-    TOKEN_ADDRESS,
+    runTokenContractAddress,
     runTokenContractABI,
     provider
   );
@@ -38,10 +38,10 @@ async function claimTokens() {
 }
 
 async function claimNft() {
-  // const nftContractAddress = "0xc566eecdc13461ff852e4f539f8d563148d2e2ed";
+  const nftContractAddress = "0x656886f287048039439ec7229b9a95aad4e7ef12";
   const mintContactAbi = ["function mint(uint256 amount) public"];
   const nftContract = new ethers.Contract(
-    NFT_ADDRESS,
+    nftContractAddress,
     mintContactAbi,
     provider
   );
