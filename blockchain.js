@@ -1,8 +1,8 @@
 //TOKEN CONTRACT ADDRESS
-const TOKEN_ADDRESS = 0x1;
+const TOKEN_ADDRESS = 0xda6bf12679a5c6643aca3389e9c13865128015cc;
 
 //NFT COLLECTION ADDRESS
-const NFT_ADDRESS = 0x1;
+const NFT_ADDRESS = 0x656886f287048039439ec7229b9a95aad4e7ef12;
 
 let provider = new ethers.providers.Web3Provider(window.ethereum);
 let signer;
